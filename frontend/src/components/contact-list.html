@@ -1,0 +1,16 @@
+<template>
+        <ul class="mdc-list">
+          <li repeat.for="contact of contacts" class="d-flex justify-content-between mdc-list-item ${contact.id === $parent.selectedId ? 'active' : ''}">
+            <a route-href="route: contacts; params.bind:{id:contact.id}" click.delegate="$parent.select(contact)">
+              <span class="mdc-list-item__text"></span>
+              <h4>${contact.firstName} ${contact.lastName}</h4>
+              <p>${contact.email}</p>
+            </a>
+            <button class="mdc-button mdc-card__action mdc-card__action--button" click.delegate="delete(contact.id)">
+              <i class="material-icons bouton delete">
+                delete_sweep
+                </i>
+            </button>
+          </li>
+        </ul>
+</template>

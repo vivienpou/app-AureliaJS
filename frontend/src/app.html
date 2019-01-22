@@ -1,0 +1,30 @@
+<template>
+    <require from="./styles.css"></require>
+    <require from="./components/contact-list"></require>
+
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="#" class="ml-5 h4">
+            Contacts
+          </a>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <a href="/add-user" class="mr-5 h4">Ajouter un utilisateur</a>
+          </section>
+      </div>
+    </header>
+  
+    <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+  
+    <div class="container">
+      <div class="row">
+        <contact-list class="col-md-4"></contact-list>
+        <router-view class="col-md-8"></router-view>
+        <router-view name="ajout"></router-view>
+      </div>
+    </div>
+
+  </template>
+  
+
