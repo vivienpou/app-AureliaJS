@@ -1,4 +1,4 @@
-# webAPP-Aurelia JS
+# app-Aurelia JS
 Display contact names
 This is the "get started" exercises from https://aurelia.io/home#building-the-application-shell a little bit customized.
 
